@@ -17,7 +17,9 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {}
-
+  onClickLogin(){
+    console.log(this.forma);
+  }
   crearFormulario() {
     this.forma = this.fb.group({
       username: ['', [Validators.required, Validators.minLength(5)]],

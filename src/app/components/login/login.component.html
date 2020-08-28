@@ -1,19 +1,21 @@
 <div class="login">
-  <h2>Inicio de sesión</h2>
-  <form class="form-login" autocomplete="off" [formGroup]="forma">
+  <h2>Login</h2>
+  <form class="form-login" autocomplete="off" [formGroup]="forma" (ngSubmit)="onClickLogin()">
     <div class="control-form-input">
       <label [ngClass]="{'label-focus':focusUsername}" for="username">
         <span class="untouched" [ngClass]="  {'touched':touchedUsername,'span-focus':focusUsername}">Username</span>
         <input type="text" name="username" id="username" (focus)='onFocusUsername()' (blur)="blurInput('username')"
           formControlName="username" />
       </label>
+      <small *ngIf="!forma.get('username').value && forma.get('username').touched" class="text-danger">username is requerid</small>
     </div>
     <div class="control-form-input">
       <label [ngClass]="{'label-focus':focusPassword}" for="password">
         <span class="untouched" [ngClass]=" {'touched':touchedPassword,'span-focus':focusPassword}">Password</span>
         <input type="password" name="password" id="password"  (focus)='onFocusPassword()' (blur)="blurInput('password')"formControlName="password" />
       </label>
+      <small *ngIf="!forma.get('password').value && forma.get('password').touched" class="text-danger">Password is requerid</small>
     </div>
-    <button type="submit" class="mt-1 btn">Iniciar sesión</button>
+    <button type="submit" class="mt-1 btn">Login</button>
   </form>
 </div>
