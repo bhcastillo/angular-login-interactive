@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+body {
+}
+
+:root {
+  --color-login: #fff;
+  --color-gray: #797979;
+  --bg-banner: #f3f3f3;
+  --color-blue: #2f51e0;
+  --color-blue-hover: #2a49c4;
+  font-family: "Hind Madurai", sans-serif;
+}
