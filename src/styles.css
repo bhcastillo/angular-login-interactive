@@ -13,5 +13,129 @@ body {
   --bg-banner: #f3f3f3;
   --color-blue: #2f51e0;
   --color-blue-hover: #2a49c4;
+  --color-danger: #dc3545;
   font-family: "Hind Madurai", sans-serif;
+}
+
+/*  styles login and register user */
+/* #####Important ######
+import root colors 
+
+*/
+
+.login {
+  position: absolute;
+  top: 20%;
+  left: 60%;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-login);
+  height: 330px;
+  width: 330px;
+  border-radius: 3rem;
+  align-items: center;
+}
+.login h2 {
+  color: var(--color-gray);
+  font-weight: 300;
+  font-size: 2.4rem;
+  padding-top: 30px;
+  padding-bottom: 2rem;
+}
+.form-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* input repose */
+.control-form-input {
+  margin-bottom: 5px;
+  padding-top: 5px;
+}
+span,
+input {
+  font: 16px/16px;
+  padding: 0;
+}
+label {
+  display: block;
+  width: 230px;
+  border: 2px solid silver;
+  padding: 8px 10px;
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 5px;
+  transition: 0.25s;
+}
+label input {
+  display: block;
+  width: 100%;
+  border: none;
+  font-size: 12px;
+  background: transparent;
+  outline: none;
+}
+.untouched {
+  color: silver;
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  transition: 0.25s;
+}
+/* input focus */
+.label-focus {
+  border-color: var(--color-blue);
+}
+.span-focus {
+  color: var(--color-blue);
+}
+/* input not-valid */
+.label-not-valid {
+  border-color: var(--color-danger);
+}
+.span-not-valid {
+  color: var(--color-danger);
+}
+
+/* input touched */
+.touched {
+  left: 3px;
+  top: -11px;
+  background: white;
+  padding: 0 4px;
+}
+.mt-1 {
+  margin-top: 2.5rem;
+}
+/* button */
+.btn {
+  width: 230px;
+  height: 40px;
+  background: var(--color-blue);
+  border-radius: 5px;
+  border: none;
+  color: var(--color-login);
+  font-size: 1.2rem;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+  transition: all ease-in 0.3s;
+}
+.btn:hover {
+  background: var(--color-blue-hover);
+}
+.text-danger {
+  color: red;
+  font-size: 10px;
+  transition: 0.3s ease-in;
+}
+.link-register {
+  margin: 0.5rem;
+  font-size: 14px;
+  color: var(--color-blue);
+}
+.link-register:hover {
+  cursor: pointer;
+  color: var(--color-blue);
+  border-bottom: 1px var(--color-blue-hover) solid;
 }

@@ -1,4 +1,5 @@
 <div class="bg-banner">
   <header class="welcome"></header>
 </div>
-<app-login> </app-login>
+<app-login *ngIf="this.auth.isLogin"> </app-login>
+<app-register-user *ngIf="!this.auth.isLogin"></app-register-user>

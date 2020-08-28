@@ -1,0 +1,24 @@
+<div class="login">
+  <h2>Login</h2>
+  <form class="form-login" [formGroup]="form" (ngSubmit)="onClickLogin()">
+    <div class="control-form-input">
+      <label [ngClass]="{'label-focus':focusUsername, 'label-not-valid': UsernameNotValid}" for="username">
+        <span class="untouched"
+          [ngClass]="  {'touched':touchedUsername,'span-focus':focusUsername, 'span-not-valid':UsernameNotValid }">Username</span>
+        <input type="text" name="username" id="username" (focus)='onFocusUsername()' (blur)="blurInput('username')"
+          formControlName="username" autocomplete="username" />
+      </label>
+
+    </div>
+    <div class="control-form-input">
+      <label [ngClass]="{'label-focus':focusPassword, 'label-not-valid': PasswordNotValid}" for="password">
+        <span class="untouched"
+          [ngClass]=" {'touched':touchedPassword,'span-focus':focusPassword, 'span-not-valid':PasswordNotValid}">Password</span>
+        <input type="password" name="password" id="password" (focus)='onFocusPassword()' (blur)="blurInput('password')"
+          formControlName="password" autocomplete="current-password" />
+      </label>
+    </div>
+    <button type="submit" class="mt-1 btn">Login</button>
+    <a class="link-register" (click)="this.auth.isLogin=false"> Register now?</a>
+  </form>
+</div>
