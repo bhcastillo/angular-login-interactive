@@ -30,10 +30,8 @@ export class LoginComponent implements OnInit {
     if(!this.forma.get(input).value){
       if (input==='username'){
         this.touchedUsername=false
-        this.focusUsername=false
       }else{
         this.touchedPassword=false
-        this.focusPassword=false
       }
     }
     if (input==='username'){
