@@ -36,6 +36,11 @@ export class LoginComponent implements OnInit {
         this.focusPassword=false
       }
     }
+    if (input==='username'){
+      this.focusUsername=false
+    }else{
+      this.focusPassword=false
+    }
   }
   onFocusUsername (){
     this.touchedUsername=true 
